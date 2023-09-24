@@ -1,12 +1,11 @@
 #include <iostream>
 using namespace std;
-// Abstract Product
+
 class Calculator {
 public:
     virtual double calculate(double a, double b) = 0;
 };
 
-// Concrete Products
 class Addition : public Calculator {
 public:
     double calculate(double a, double b) override {
@@ -34,7 +33,7 @@ public:
         if (b != 0) {
             return a / b;
         } else {
-            std::cerr << "Error: Division by zero." << std::endl;
+            cerr << "Error: Division by zero." << std::endl;
             return 0;
         }
     }
